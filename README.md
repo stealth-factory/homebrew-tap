@@ -1,11 +1,11 @@
-# wiiiimm's Homebrew Tap
+# Stealth Factory's Homebrew Tap
 
-This tap contains formulae for tools created by wiiiimm.
+This tap contains formulae for tools maintained by Stealth Factory.
 
 ## Installation
 
 ```bash
-brew tap wiiiimm/tap
+brew tap stealth-factory/tap
 ```
 
 ## Available Formulae
@@ -19,7 +19,7 @@ Interactive terminal UI for managing GitHub repositories.
 brew install gh-manager-cli
 
 # Or install directly without tapping
-brew install wiiiimm/tap/gh-manager-cli
+brew install stealth-factory/tap/gh-manager-cli
 ```
 
 **Features:**
@@ -30,8 +30,20 @@ brew install wiiiimm/tap/gh-manager-cli
 - Organization support
 
 **Links:**
-- [GitHub Repository](https://github.com/wiiiimm/gh-manager-cli)
+- [GitHub Repository](https://github.com/stealth-factory/gh-manager-cli)
 - [npm Package](https://www.npmjs.com/package/gh-manager-cli)
+
+## Migrating from the personal tap
+
+If you previously used `wiiiimm/tap`, switch to the organization tap:
+
+```bash
+brew tap stealth-factory/tap
+brew reinstall stealth-factory/tap/gh-manager-cli
+```
+
+Keep the old tap if you still use other formulae from it. Once all installed
+formulae have been migrated, you can remove it with `brew untap wiiiimm/tap`.
 
 ## Updating
 
@@ -46,8 +58,8 @@ If you encounter issues:
 
 ```bash
 brew uninstall gh-manager-cli
-brew untap wiiiimm/tap
-brew tap wiiiimm/tap
+brew untap stealth-factory/tap
+brew tap stealth-factory/tap
 brew install gh-manager-cli
 ```
 
