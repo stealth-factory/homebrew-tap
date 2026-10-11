@@ -38,10 +38,12 @@ brew install stealth-factory/tap/gh-manager-cli
 If you previously used `wiiiimm/tap`, switch to the organization tap:
 
 ```bash
-brew untap wiiiimm/tap
 brew tap stealth-factory/tap
 brew reinstall stealth-factory/tap/gh-manager-cli
 ```
+
+Keep the old tap if you still use other formulae from it. Once all installed
+formulae have been migrated, you can remove it with `brew untap wiiiimm/tap`.
 
 ## Updating
 
