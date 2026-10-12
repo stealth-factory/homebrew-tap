@@ -33,6 +33,28 @@ brew install stealth-factory/tap/gh-manager-cli
 - [GitHub Repository](https://github.com/stealth-factory/gh-manager-cli)
 - [npm Package](https://www.npmjs.com/package/gh-manager-cli)
 
+### opscope
+
+Terminal widgets showing real operational data, for Apple Silicon and Intel Macs.
+
+```sh
+brew install stealth-factory/tap/opscope
+opscope                      # open the menu
+opscope clocks               # open a widget directly
+opscope doctor               # check optional external tools
+brew update && brew upgrade opscope
+```
+
+Only `opscope` is exposed on PATH. The native launcher and all widgets ship
+together; no Node or Rust installation is needed. Settings stay in
+`~/.config/opscope/config.json` (or the configured override) across upgrades.
+
+The formula is generated and updated by
+[opscope's release workflow](https://github.com/stealth-factory/opscope/blob/main/.github/workflows/release.yml)
+from its checksummed public Mac release archives.
+
+[Repository and documentation](https://github.com/stealth-factory/opscope)
+
 ## Migrating from the personal tap
 
 If you previously used `wiiiimm/tap`, switch to the organization tap:
