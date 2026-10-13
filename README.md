@@ -51,7 +51,16 @@ together; no Node or Rust installation is needed. Settings stay in
 
 The formula is generated and updated by
 [opscope's release workflow](https://github.com/stealth-factory/opscope/blob/main/.github/workflows/release.yml)
-from its checksummed public Mac release archives.
+from its checksummed public Mac release archives. The initial formula must be
+merged into this tap's `main` branch before the release updater can run. The
+updater edits only `Formula/opscope.rb`, verifies the existing version, and refuses
+to downgrade or replace different formula bytes for the same version.
+
+Homebrew and [APT](https://github.com/stealth-factory/apt-repo) receive updates
+from the same published Opscope release. Homebrew uses the two Mac archives;
+APT uses the Linux amd64 Debian package and requires its signing/publishing
+activation. A failure in either delivery job needs separate recovery; a GitHub
+release alone does not prove both package managers are updated.
 
 [Repository and documentation](https://github.com/stealth-factory/opscope)
 
